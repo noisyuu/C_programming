@@ -15,12 +15,13 @@ void swap(int* left, int* right){
 void bubble_Sort(int a[], int size){
 	int i = 0;
 	int swapped = FALSE;
+	//do..while loop
 	do{
 		swapped = FALSE;
 		for(i = 0; i<size-1;i++){
 			if(a[i]>a[i+1]){
 				swap(&a[i],&a[i+1]);	
-				swapped = TRUE;
+				swapped = TRUE; //if ever swap method used, checking the whole list
 			}
 		}
 	}while(swapped);
@@ -28,10 +29,11 @@ void bubble_Sort(int a[], int size){
 
 
 int main(int argc, char** argv){
-	int a[5] = {3,10,1,20,15};
+	int a[] = {3,10,1,20,15.9,10,22,13,1};
 	int i;
-	bubble_Sort(a,5);
-	for(i = 0; i< 5;i++){
+	int size = sizeof(a)/sizeof(int);
+	bubble_Sort(a,size);
+	for(i = 0; i< size;i++){
 		printf("%d ",a[i]);
 	}
 	return 0;
