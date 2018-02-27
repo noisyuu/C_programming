@@ -4,7 +4,7 @@
 
 #define TRUE 1
 #define FALSE 0
-#define SIZE 10
+//#define SIZE 10
 
 typedef struct data_pack{
 	int* a;
@@ -44,8 +44,10 @@ void selection_Sort(int a[],int size){
 	}
 }
 
+
+
 pack_t arrayGenerator(){
-	//generate a random size in the range [10,30)
+	//generate a random size array in the range [10,30)
 	pack_t package;
 	int *result;
 
@@ -64,6 +66,9 @@ pack_t arrayGenerator(){
 }
 
 /**
+
+In this part, I gotta consider high cohesion
+
 int * getRandom() {
 
    static int  r[10];
