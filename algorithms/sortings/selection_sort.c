@@ -1,3 +1,9 @@
+/*
+	Author : Yicheng Shao
+	Name: Merge_sort
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -7,8 +13,8 @@
 //#define SIZE 10
 
 typedef struct data_pack{
-	int* a;
-	int n;
+	int* a; //random generated array
+	int n; 	//size of array
 }pack_t;
 
 int * getRandom();
@@ -99,5 +105,6 @@ int main(int argc, char** argv){
 	for(i = 0; i< array.n;i++){
 		printf("%d ",array.a[i]);
 	}
+	free(array.arr);
 	return 0;
 }

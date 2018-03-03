@@ -1,3 +1,8 @@
+/*
+	Author : Yicheng Shao
+	Name: Merge_sort
+*/
+
 #include "stdio.h"
 #define TRUE 1
 #define FALSE 0

@@ -1,3 +1,8 @@
+/*
+	Author : Yicheng Shao
+	Name: Merge_sort
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -43,23 +48,21 @@ void insertion_sort(pack_t pack){
 	int elem;
 
 	for(first_unsorted_index = 1; first_unsorted_index < pack.size; first_unsorted_index++ ){
-		printf("first_unsorted_index: %d\n", first_unsorted_index);
+		//printf("first_unsorted_index: %d\n", first_unsorted_index);
 		elem = pack.arr[first_unsorted_index];
-		printf("element : %d \n", elem);
-		printf("last_sorted_index: %d\n", last_sorted_index);
+		//printf("element : %d \n", elem);
+		//printf("sorted_index: %d\n", last_sorted_index);
 		for(i = last_sorted_index; i >= 0; i --){
 
-			printf("last_sorted_element : %d \n", pack.arr[i]);
+		//	printf("last_sorted_element : %d \n", pack.arr[i]);
 			if(elem < pack.arr[i]){
 				move_r(pack.arr,i);
-				for(j = 0; j<pack.size ;j++){
+		/**		for(j = 0; j<pack.size ;j++){
 					printf("%d ",pack.arr[j]);
 				}
-				printf("\n");
+				printf("\n");**/
 			}else{
-
 				pack.arr[i+1] = elem;
-				
 				break;
 			}
 		}
@@ -74,13 +77,18 @@ int main(int argc, char** argv){
 	for(i = 0; i<array.size ;i++){
 		printf("%d ",array.arr[i]);
 	}
+
 	//move_r(array.arr,2);
 	//move_r(array.arr,3);
 	insertion_sort(array);
-	printf("Final sorted array: \n");
+
+	printf("\nFinal sorted array: \n");
+	
 	for(i = 0; i< array.size;i++){
 		printf("%d ",array.arr[i]);
 	}
+
+	free(array.arr);
 	return 0;
 	
 
