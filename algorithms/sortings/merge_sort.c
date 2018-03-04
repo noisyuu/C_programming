@@ -66,7 +66,7 @@ pack_t* generate_array(){
 	int* temp = (int *)malloc(sizeof(int)*(size));
 	int i;
 	for(i = 0; i<(size);i++){
-		arr[i] = rand() % 50;
+		arr[i] = rand() % 26 + 65;
 	}
 	package->arr = arr;
 	package->temp = temp;
@@ -82,7 +82,7 @@ int main(){
 	printf("Generated array size: %d\n",package->size);
 	for (i = 0; i < package->size; i++)
 	{
-		printf("%d ", package->arr[i]);
+		printf("%c ", package->arr[i]);
 	}
 	
 
@@ -90,11 +90,17 @@ int main(){
 	printf("\nResult: \n");
 	for (i = 0; i < package->size; i++)
 	{
-		printf("%d ", package->arr[i]);
+		printf("%c ", package->arr[i]);
 	}
-	
 	free(package->arr);
 	free(package->temp);
 	free(package);
 	return 1;
 }
+
+
+/*
+int main(){
+	char compare[] = "Hello World";
+	printf("\n %d", 'A');
+}*/
