@@ -1,3 +1,13 @@
+/*
+	Author : Yicheng Shao
+	Name: quick_sort
+*/
+
+
+//Time complexity O(NlogN)
+//IMPORTANT NOTE
+//quick_sort is actually slower than insertion_sort when dealing with small array
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -61,7 +71,7 @@ int partition(int* arr, int lo, int hi){
 
 void quick_sort(int* arr, int lo, int hi){
 	if(lo < hi){
-		int j = partition(arr,lo,hi);
+		int j = partition(arr,lo,hi);  
 		quick_sort(arr,lo,j-1);
 		quick_sort(arr,j+1,hi);
 	}else{

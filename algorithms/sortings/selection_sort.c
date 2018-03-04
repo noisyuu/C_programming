@@ -1,8 +1,10 @@
 /*
 	Author : Yicheng Shao
-	Name: Merge_sort
+	Name: selection_sort
 */
 
+
+//Time complexity O(N^2)
 
 #include <stdio.h>
 #include <stdlib.h>

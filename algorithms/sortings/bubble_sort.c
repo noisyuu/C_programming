@@ -1,7 +1,10 @@
 /*
 	Author : Yicheng Shao
-	Name: Merge_sort
+	Name: bubble_Sort
 */
+
+
+//Time complexity O(N^2)
 
 #include "stdio.h"
 #define TRUE 1
