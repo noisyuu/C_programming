@@ -3,6 +3,9 @@
 	Name: Merge_sort
 */
 
+//Time complexity O(NlogN)
+
+
 
 #include<stdio.h>
 #include<stdlib.h>
